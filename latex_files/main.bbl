@@ -1,0 +1,289 @@
+\begin{thebibliography}{31}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{#2}
+\providecommand{\path}[1]{#1}
+\providecommand{\DOIprefix}{doi:}
+\providecommand{\ArXivprefix}{arXiv:}
+\providecommand{\URLprefix}{URL: }
+\providecommand{\Pubmedprefix}{pmid:}
+\providecommand{\doi}[1]{\href{http://dx.doi.org/#1}{\path{#1}}}
+\providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Article
+\bibitem[{Andrychowicz et~al.(2020)Andrychowicz, Baker, Chociej, Jozefowicz,
+  McGrew, Pachocki, Petron, Plappert, Powell, Ray
+  et~al.}]{andrychowicz2020learning}
+\bibinfo{author}{Andrychowicz, O.M.}, \bibinfo{author}{Baker, B.},
+  \bibinfo{author}{Chociej, M.}, \bibinfo{author}{Jozefowicz, R.},
+  \bibinfo{author}{McGrew, B.}, \bibinfo{author}{Pachocki, J.},
+  \bibinfo{author}{Petron, A.}, \bibinfo{author}{Plappert, M.},
+  \bibinfo{author}{Powell, G.}, \bibinfo{author}{Ray, A.}, et~al.,
+  \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{Learning dexterous in-hand manipulation}.
+\newblock \bibinfo{journal}{The International Journal of Robotics Research}
+  \bibinfo{volume}{39}, \bibinfo{pages}{3--20}.
+%Type = Inproceedings
+\bibitem[{Anzai and Takahashi(2020)}]{anzai2020deep}
+\bibinfo{author}{Anzai, T.}, \bibinfo{author}{Takahashi, K.},
+  \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{Deep gated multi-modal learning: In-hand object pose
+  changes estimation using tactile and image data}, in:
+  \bibinfo{booktitle}{Proc. IEEE/RSJ Int. Conf. Intell. Robots Syst.},
+  \bibinfo{organization}{IEEE}. pp. \bibinfo{pages}{9361--9368}.
+%Type = Article
+\bibitem[{Billings and Johnson-Roberson(2019)}]{billings2019silhonet}
+\bibinfo{author}{Billings, G.}, \bibinfo{author}{Johnson-Roberson, M.},
+  \bibinfo{year}{2019}.
+\newblock \bibinfo{title}{Silhonet: An rgb method for 6d object pose
+  estimation}.
+\newblock \bibinfo{journal}{IEEE Robotics and Automation Letters}
+  \bibinfo{volume}{4}, \bibinfo{pages}{3727--3734}.
+%Type = Inproceedings
+\bibitem[{Br{\'e}gier et~al.(2017)Br{\'e}gier, Devernay, Leyrit and
+  Crowley}]{bregier2017symmetry}
+\bibinfo{author}{Br{\'e}gier, R.}, \bibinfo{author}{Devernay, F.},
+  \bibinfo{author}{Leyrit, L.}, \bibinfo{author}{Crowley, J.L.},
+  \bibinfo{year}{2017}.
+\newblock \bibinfo{title}{Symmetry aware evaluation of 3d object detection and
+  pose estimation in scenes of many parts in bulk}, in:
+  \bibinfo{booktitle}{Int. Conf. Comput. Vis. Worksh.}, pp.
+  \bibinfo{pages}{2209--2218}.
+%Type = Inproceedings
+\bibitem[{Castro and Kim(2023)}]{castro2023crt}
+\bibinfo{author}{Castro, P.}, \bibinfo{author}{Kim, T.K.},
+  \bibinfo{year}{2023}.
+\newblock \bibinfo{title}{Crt-6d: Fast 6d object pose estimation with cascaded
+  refinement transformers}, in: \bibinfo{booktitle}{Proc. IEEE/CVF Conf.
+  Comput. Vis. Pattern Recognit.}, pp. \bibinfo{pages}{5746--5755}.
+%Type = Inproceedings
+\bibitem[{Chao et~al.(2021)Chao, Yang, Xiang, Molchanov, Handa, Tremblay,
+  Narang, Van~Wyk, Iqbal, Birchfield et~al.}]{chao2021dexycb}
+\bibinfo{author}{Chao, Y.W.}, \bibinfo{author}{Yang, W.},
+  \bibinfo{author}{Xiang, Y.}, \bibinfo{author}{Molchanov, P.},
+  \bibinfo{author}{Handa, A.}, \bibinfo{author}{Tremblay, J.},
+  \bibinfo{author}{Narang, Y.S.}, \bibinfo{author}{Van~Wyk, K.},
+  \bibinfo{author}{Iqbal, U.}, \bibinfo{author}{Birchfield, S.}, et~al.,
+  \bibinfo{year}{2021}.
+\newblock \bibinfo{title}{Dexycb: A benchmark for capturing hand grasping of
+  objects}, in: \bibinfo{booktitle}{Proc. IEEE/CVF Conf. Comput. Vis. Pattern
+  Recognit.}, pp. \bibinfo{pages}{9044--9053}.
+%Type = Inproceedings
+\bibitem[{Di et~al.(2022)Di, Zhang, Lou, Manhardt, Ji, Navab and
+  Tombari}]{di2022gpv}
+\bibinfo{author}{Di, Y.}, \bibinfo{author}{Zhang, R.}, \bibinfo{author}{Lou,
+  Z.}, \bibinfo{author}{Manhardt, F.}, \bibinfo{author}{Ji, X.},
+  \bibinfo{author}{Navab, N.}, \bibinfo{author}{Tombari, F.},
+  \bibinfo{year}{2022}.
+\newblock \bibinfo{title}{Gpv-pose: Category-level object pose estimation via
+  geometry-guided point-wise voting}, in: \bibinfo{booktitle}{Proc. IEEE/CVF
+  Conf. Comput. Vis. Pattern Recognit.}, pp. \bibinfo{pages}{6781--6791}.
+%Type = Inproceedings
+\bibitem[{Gao et~al.(2020)Gao, Lauri, Wang, Hu, Zhang and Frintrop}]{gao20206d}
+\bibinfo{author}{Gao, G.}, \bibinfo{author}{Lauri, M.}, \bibinfo{author}{Wang,
+  Y.}, \bibinfo{author}{Hu, X.}, \bibinfo{author}{Zhang, J.},
+  \bibinfo{author}{Frintrop, S.}, \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{6d object pose regression via supervised learning on
+  point clouds}, in: \bibinfo{booktitle}{Proc.IEEE Int. Conf. Robot. Automat.},
+  \bibinfo{organization}{IEEE}. pp. \bibinfo{pages}{3643--3649}.
+%Type = Inproceedings
+\bibitem[{Garcia-Hernando et~al.(2018)Garcia-Hernando, Yuan, Baek and
+  Kim}]{garcia2018first}
+\bibinfo{author}{Garcia-Hernando, G.}, \bibinfo{author}{Yuan, S.},
+  \bibinfo{author}{Baek, S.}, \bibinfo{author}{Kim, T.K.},
+  \bibinfo{year}{2018}.
+\newblock \bibinfo{title}{First-person hand action benchmark with rgb-d videos
+  and 3d hand pose annotations}, in: \bibinfo{booktitle}{Proc. IEEE/CVF Conf.
+  Comput. Vis. Pattern Recognit.}, pp. \bibinfo{pages}{409--419}.
+%Type = Inproceedings
+\bibitem[{Girshick(2015)}]{girshick2015fast}
+\bibinfo{author}{Girshick, R.}, \bibinfo{year}{2015}.
+\newblock \bibinfo{title}{Fast r-cnn}, in: \bibinfo{booktitle}{Proc.IEEE/CVF
+  Int. Conf. Comput. Vis.}, pp. \bibinfo{pages}{1440--1448}.
+%Type = Article
+\bibitem[{Guo et~al.(2021)Guo, Xing, Quan, Yan, Gu, Liu and
+  Zhang}]{guo2021efficient}
+\bibinfo{author}{Guo, J.}, \bibinfo{author}{Xing, X.}, \bibinfo{author}{Quan,
+  W.}, \bibinfo{author}{Yan, D.M.}, \bibinfo{author}{Gu, Q.},
+  \bibinfo{author}{Liu, Y.}, \bibinfo{author}{Zhang, X.}, \bibinfo{year}{2021}.
+\newblock \bibinfo{title}{Efficient center voting for object detection and 6d
+  pose estimation in 3d point cloud}.
+\newblock \bibinfo{journal}{IEEE Transactions on Image Processing}
+  \bibinfo{volume}{30}, \bibinfo{pages}{5072--5084}.
+%Type = Inproceedings
+\bibitem[{Hampali et~al.(2020)Hampali, Rad, Oberweger and
+  Lepetit}]{hampali2020honnotate}
+\bibinfo{author}{Hampali, S.}, \bibinfo{author}{Rad, M.},
+  \bibinfo{author}{Oberweger, M.}, \bibinfo{author}{Lepetit, V.},
+  \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{Honnotate: A method for 3d annotation of hand and
+  object poses}, in: \bibinfo{booktitle}{Proc. IEEE/CVF Conf. Comput. Vis.
+  Pattern Recognit.}, pp. \bibinfo{pages}{3196--3206}.
+%Type = Inproceedings
+\bibitem[{Handa et~al.(2020)Handa, Van~Wyk, Yang, Liang, Chao, Wan, Birchfield,
+  Ratliff and Fox}]{handa2020dexpilot}
+\bibinfo{author}{Handa, A.}, \bibinfo{author}{Van~Wyk, K.},
+  \bibinfo{author}{Yang, W.}, \bibinfo{author}{Liang, J.},
+  \bibinfo{author}{Chao, Y.W.}, \bibinfo{author}{Wan, Q.},
+  \bibinfo{author}{Birchfield, S.}, \bibinfo{author}{Ratliff, N.},
+  \bibinfo{author}{Fox, D.}, \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{Dexpilot: Vision-based teleoperation of dexterous
+  robotic hand-arm system}, in: \bibinfo{booktitle}{Proc.IEEE Int. Conf. Robot.
+  Automat.}, \bibinfo{organization}{IEEE}. pp. \bibinfo{pages}{9164--9170}.
+%Type = Inproceedings
+\bibitem[{He et~al.(2016)He, Zhang, Ren and Sun}]{he2016deep}
+\bibinfo{author}{He, K.}, \bibinfo{author}{Zhang, X.}, \bibinfo{author}{Ren,
+  S.}, \bibinfo{author}{Sun, J.}, \bibinfo{year}{2016}.
+\newblock \bibinfo{title}{Deep residual learning for image recognition}, in:
+  \bibinfo{booktitle}{Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit.}, pp.
+  \bibinfo{pages}{770--778}.
+%Type = Inproceedings
+\bibitem[{He et~al.(2021)He, Huang, Fan, Chen and Sun}]{he2021ffb6d}
+\bibinfo{author}{He, Y.}, \bibinfo{author}{Huang, H.}, \bibinfo{author}{Fan,
+  H.}, \bibinfo{author}{Chen, Q.}, \bibinfo{author}{Sun, J.},
+  \bibinfo{year}{2021}.
+\newblock \bibinfo{title}{Ffb6d: A full flow bidirectional fusion network for
+  6d pose estimation}, in: \bibinfo{booktitle}{Proc. IEEE/CVF Conf. Comput.
+  Vis. Pattern Recognit.}, pp. \bibinfo{pages}{3003--3013}.
+%Type = Inproceedings
+\bibitem[{He et~al.(2020)He, Sun, Huang, Liu, Fan and Sun}]{he2020pvn3d}
+\bibinfo{author}{He, Y.}, \bibinfo{author}{Sun, W.}, \bibinfo{author}{Huang,
+  H.}, \bibinfo{author}{Liu, J.}, \bibinfo{author}{Fan, H.},
+  \bibinfo{author}{Sun, J.}, \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{Pvn3d: A deep point-wise 3d keypoints voting network
+  for 6dof pose estimation}, in: \bibinfo{booktitle}{Proc. IEEE/CVF Conf.
+  Comput. Vis. Pattern Recognit.}, pp. \bibinfo{pages}{11632--11641}.
+%Type = Inproceedings
+\bibitem[{Hinterstoisser et~al.(2012)Hinterstoisser, Lepetit, Ilic, Holzer,
+  Bradski, Konolige and Navab}]{hinterstoisser2012model}
+\bibinfo{author}{Hinterstoisser, S.}, \bibinfo{author}{Lepetit, V.},
+  \bibinfo{author}{Ilic, S.}, \bibinfo{author}{Holzer, S.},
+  \bibinfo{author}{Bradski, G.}, \bibinfo{author}{Konolige, K.},
+  \bibinfo{author}{Navab, N.}, \bibinfo{year}{2012}.
+\newblock \bibinfo{title}{Model based training, detection and pose estimation
+  of texture-less 3d objects in heavily cluttered scenes}, in:
+  \bibinfo{booktitle}{Asian conference on computer vision},
+  \bibinfo{organization}{Springer}. pp. \bibinfo{pages}{548--562}.
+%Type = Inproceedings
+\bibitem[{Hong et~al.(2024)Hong, Hung and Chen}]{hong2024rdpn6d}
+\bibinfo{author}{Hong, Z.W.}, \bibinfo{author}{Hung, Y.Y.},
+  \bibinfo{author}{Chen, C.S.}, \bibinfo{year}{2024}.
+\newblock \bibinfo{title}{Rdpn6d: Residual-based dense point-wise network for
+  6dof object pose estimation based on rgb-d images}, in:
+  \bibinfo{booktitle}{Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit.}, pp.
+  \bibinfo{pages}{5251--5260}.
+%Type = Inproceedings
+\bibitem[{Hough(1959)}]{hough1959machine}
+\bibinfo{author}{Hough, P.V.}, \bibinfo{year}{1959}.
+\newblock \bibinfo{title}{Machine analysis of bubble chamber pictures}, in:
+  \bibinfo{booktitle}{Proc. of the International Conference on High Energy
+  Accelerators and Instrumentation, Sept. 1959}, pp. \bibinfo{pages}{554--556}.
+%Type = Inproceedings
+\bibitem[{Lin et~al.(2024)Lin, Su, Nathan, Inuganti, Di, Sundermeyer, Manhardt,
+  Stricker, Rambach and Zhang}]{lin2024hipose}
+\bibinfo{author}{Lin, Y.}, \bibinfo{author}{Su, Y.}, \bibinfo{author}{Nathan,
+  P.}, \bibinfo{author}{Inuganti, S.}, \bibinfo{author}{Di, Y.},
+  \bibinfo{author}{Sundermeyer, M.}, \bibinfo{author}{Manhardt, F.},
+  \bibinfo{author}{Stricker, D.}, \bibinfo{author}{Rambach, J.},
+  \bibinfo{author}{Zhang, Y.}, \bibinfo{year}{2024}.
+\newblock \bibinfo{title}{Hipose: Hierarchical binary surface encoding and
+  correspondence pruning for rgb-d 6dof object pose estimation}, in:
+  \bibinfo{booktitle}{Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit.}, pp.
+  \bibinfo{pages}{10148--10158}.
+%Type = Inproceedings
+\bibitem[{Peng et~al.(2019)Peng, Liu, Huang, Zhou and Bao}]{peng2019pvnet}
+\bibinfo{author}{Peng, S.}, \bibinfo{author}{Liu, Y.}, \bibinfo{author}{Huang,
+  Q.}, \bibinfo{author}{Zhou, X.}, \bibinfo{author}{Bao, H.},
+  \bibinfo{year}{2019}.
+\newblock \bibinfo{title}{Pvnet: Pixel-wise voting network for 6dof pose
+  estimation}, in: \bibinfo{booktitle}{Proc. IEEE/CVF Conf. Comput. Vis.
+  Pattern Recognit.}, pp. \bibinfo{pages}{4561--4570}.
+%Type = Article
+\bibitem[{Pfanne et~al.(2018)Pfanne, Chalon, Stulp and
+  Albu-Sch{\"a}ffer}]{pfanne2018fusing}
+\bibinfo{author}{Pfanne, M.}, \bibinfo{author}{Chalon, M.},
+  \bibinfo{author}{Stulp, F.}, \bibinfo{author}{Albu-Sch{\"a}ffer, A.},
+  \bibinfo{year}{2018}.
+\newblock \bibinfo{title}{Fusing joint measurements and visual features for
+  in-hand object pose estimation}.
+\newblock \bibinfo{journal}{IEEE Robotics and Automation Letters}
+  \bibinfo{volume}{3}, \bibinfo{pages}{3497--3504}.
+%Type = Inproceedings
+\bibitem[{Qi et~al.(2019)Qi, Litany, He and Guibas}]{qi2019deep}
+\bibinfo{author}{Qi, C.R.}, \bibinfo{author}{Litany, O.}, \bibinfo{author}{He,
+  K.}, \bibinfo{author}{Guibas, L.J.}, \bibinfo{year}{2019}.
+\newblock \bibinfo{title}{Deep hough voting for 3d object detection in point
+  clouds}, in: \bibinfo{booktitle}{Proc.IEEE/CVF Int. Conf. Comput. Vis.}, pp.
+  \bibinfo{pages}{9277--9286}.
+%Type = Inproceedings
+\bibitem[{Qi et~al.(2017)Qi, Yi, Su and Guibas}]{qi2017pointnet++}
+\bibinfo{author}{Qi, C.R.}, \bibinfo{author}{Yi, L.}, \bibinfo{author}{Su, H.},
+  \bibinfo{author}{Guibas, L.J.}, \bibinfo{year}{2017}.
+\newblock \bibinfo{title}{Pointnet++: Deep hierarchical feature learning on
+  point sets in a metric space}, in: \bibinfo{booktitle}{Advances in neural
+  information processing systems}, pp. \bibinfo{pages}{5099--5108}.
+%Type = Inproceedings
+\bibitem[{Wang et~al.(2019)Wang, Xu, Zhu, Mart{\'\i}n-Mart{\'\i}n, Lu, Fei-Fei
+  and Savarese}]{wang2019densefusion}
+\bibinfo{author}{Wang, C.}, \bibinfo{author}{Xu, D.}, \bibinfo{author}{Zhu,
+  Y.}, \bibinfo{author}{Mart{\'\i}n-Mart{\'\i}n, R.}, \bibinfo{author}{Lu, C.},
+  \bibinfo{author}{Fei-Fei, L.}, \bibinfo{author}{Savarese, S.},
+  \bibinfo{year}{2019}.
+\newblock \bibinfo{title}{Densefusion: 6d object pose estimation by iterative
+  dense fusion}, in: \bibinfo{booktitle}{Proc. IEEE/CVF Conf. Comput. Vis.
+  Pattern Recognit.}, pp. \bibinfo{pages}{3343--3352}.
+%Type = Inproceedings
+\bibitem[{Wang et~al.(2021a)Wang, Manhardt, Tombari and Ji}]{wang2021gdr}
+\bibinfo{author}{Wang, G.}, \bibinfo{author}{Manhardt, F.},
+  \bibinfo{author}{Tombari, F.}, \bibinfo{author}{Ji, X.},
+  \bibinfo{year}{2021}a.
+\newblock \bibinfo{title}{Gdr-net: Geometry-guided direct regression network
+  for monocular 6d object pose estimation}, in: \bibinfo{booktitle}{Proc.
+  IEEE/CVF Conf. Comput. Vis. Pattern Recognit.}, pp.
+  \bibinfo{pages}{16611--16621}.
+%Type = Inproceedings
+\bibitem[{Wang et~al.(2021b)Wang, Wang and Zhuang}]{wang20216d}
+\bibinfo{author}{Wang, H.}, \bibinfo{author}{Wang, H.},
+  \bibinfo{author}{Zhuang, C.}, \bibinfo{year}{2021}b.
+\newblock \bibinfo{title}{6d pose estimation from point cloud using an improved
+  point pair features method}, in: \bibinfo{booktitle}{2021 7th International
+  Conference on Control, Automation and Robotics (ICCAR)},
+  \bibinfo{organization}{IEEE}. pp. \bibinfo{pages}{280--284}.
+%Type = Article
+\bibitem[{Wu et~al.(2023)Wu, Chen, Wang, Yang and Jiang}]{wu2023geometric}
+\bibinfo{author}{Wu, C.}, \bibinfo{author}{Chen, L.}, \bibinfo{author}{Wang,
+  S.}, \bibinfo{author}{Yang, H.}, \bibinfo{author}{Jiang, J.},
+  \bibinfo{year}{2023}.
+\newblock \bibinfo{title}{Geometric-aware dense matching network for 6d pose
+  estimation of objects from rgb-d images}.
+\newblock \bibinfo{journal}{Pattern Recognition} \bibinfo{volume}{137},
+  \bibinfo{pages}{109293}.
+%Type = Inproceedings
+\bibitem[{Xie et~al.(2021)Xie, Lai, Wu, Wang, Lu, Wei and Wang}]{xie2021venet}
+\bibinfo{author}{Xie, Q.}, \bibinfo{author}{Lai, Y.K.}, \bibinfo{author}{Wu,
+  J.}, \bibinfo{author}{Wang, Z.}, \bibinfo{author}{Lu, D.},
+  \bibinfo{author}{Wei, M.}, \bibinfo{author}{Wang, J.}, \bibinfo{year}{2021}.
+\newblock \bibinfo{title}{Venet: Voting enhancement network for 3d object
+  detection}, in: \bibinfo{booktitle}{Proc. IEEE/CVF Conf. Comput. Vis. Pattern
+  Recognit.}, pp. \bibinfo{pages}{3712--3721}.
+%Type = Inproceedings
+\bibitem[{Xie et~al.(2020)Xie, Lai, Wu, Wang, Zhang, Xu and
+  Wang}]{xie2020mlcvnet}
+\bibinfo{author}{Xie, Q.}, \bibinfo{author}{Lai, Y.K.}, \bibinfo{author}{Wu,
+  J.}, \bibinfo{author}{Wang, Z.}, \bibinfo{author}{Zhang, Y.},
+  \bibinfo{author}{Xu, K.}, \bibinfo{author}{Wang, J.}, \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{Mlcvnet: Multi-level context votenet for 3d object
+  detection}, in: \bibinfo{booktitle}{Proc. IEEE/CVF Conf. Comput. Vis. Pattern
+  Recognit.}, pp. \bibinfo{pages}{10447--10456}.
+%Type = Inproceedings
+\bibitem[{Zhang et~al.(2019)Zhang, Goodfellow, Metaxas and
+  Odena}]{zhang2019self}
+\bibinfo{author}{Zhang, H.}, \bibinfo{author}{Goodfellow, I.},
+  \bibinfo{author}{Metaxas, D.}, \bibinfo{author}{Odena, A.},
+  \bibinfo{year}{2019}.
+\newblock \bibinfo{title}{Self-attention generative adversarial networks}, in:
+  \bibinfo{booktitle}{International conference on machine learning},
+  \bibinfo{organization}{PMLR}. pp. \bibinfo{pages}{7354--7363}.
+
+\end{thebibliography}
