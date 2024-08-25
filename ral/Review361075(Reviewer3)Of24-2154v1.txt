@@ -1,0 +1,46 @@
+The paper addresses the challenge of robust hand-object pose estimation
+from RGBD data, a significant problem within computer vision, graphics,
+and robotics. The method's relevance to robotics is evident, as precise
+pose estimation can enhance robotic manipulation tasks. However, the
+paper primarily focuses on the technical aspect of pose estimation
+rather than presenting any concrete applications within robotics. This
+focus makes the paper better suited for a vision conference rather than
+a robotics-specific journal.
+
+Technical Contribution:
+The proposed method introduces a vote-based approach to improve pose
+estimation performance, particularly by addressing the limitations of
+two-branch architectures during fine-tuning. While the technique is
+interesting and shows promise in enhancing prediction accuracy, it is
+important to acknowledge that more recent works in the field have
+reported higher prediction scores. The paper could benefit from citing
+these works and positioning its contributions within this broader
+context.
+
+Related Work:
+The paper would be strengthened by a more comprehensive discussion of
+recent developments in hand-held object pose estimation. Specifically,
+the authors should consider including and contrasting their work with
+the following papers:
+
+HOPE-Net: A Graph-Based Model for Hand-Object Pose Estimation (Dosti et
+al., 2020)
+Generalized Feedback Loop for Joint Hand-Object Pose Estimation
+(Oberweger et al., 2020)
+Semi-Supervised 3D Hand-Object Poses Estimation With Interactions in
+Time (Liu et al., 2021)
+Harmonious Feature Learning for Interactive Hand-Object Pose Estimation
+(Lin et al., 2023)
+Interacting Hand-Object Pose Estimation via Dense Mutual Attention
+(Wang et al., 2023)
+
+Writing & Presentation Comments:
+The paper clearly articulates the problem scope and high-level
+approach, making the research objective understandable. However, the
+writing could be improved by distinguishing between the conceptual
+framework and the implementation details. Currently, the dense methods
+section makes it difficult for readers to follow the key elements of
+the method vs the implementation details. All figures must be
+referenced in the text. 
+Consider refering to the visuals more frequently to aid the readers'
+understanding.

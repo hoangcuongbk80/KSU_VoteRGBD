@@ -1,0 +1,47 @@
+This paper proposes a deep learning-based model for the RGB-D hand-held
+object pose estimation task. It tries to solve the occlusion challenges
+by introducing a vote-based fusion mechanism for 2D and 3D sub-branches
+and a self-attention mechanism to model the key point interaction
+between the hand and the object. The authors conduct experiments on
+public datasets.
+(1) Strengths. 
+This paper's idea is explained simply and clearly, the structure is
+complete, and the writing is simple and clean. Technically, the 2D and
+3D voting-based strategy seems new for this task.
+(2) Weaknesses. 
+The motivation for using voting-based and self-attention mechanisms is
+not reasonably clarified. Why can a voting-based strategy help overcome
+the occlusion problem compared to another fusion strategy? Explanation
+should be given on this point, and it is better to show some sample
+cases;
+The experiments can't verify the proposed idea and novelty. Figure 2
+shows multiple errors in the testing images and results. The result can
+not come up with a fair conclusion among these methods. 
+The ablation study is not complete. Table 2 shows the ablation study
+results of the method with multiple improved versions, including the
+version that excludes hand keypoint voting, the version with a
+vote-based fusion module using channel attention, and the version with
+hand-aware object pose estimation using self-attention. While it is
+hard for the reviewer to figure out the implementation of each version,
+for example, what is the pipeline when there isn't hand keypoint
+voting? How is the following fusion stage implemented? The Controlled
+variables should be clearly clarified.
+(1)Figure 1 does not clearly explain the proposed method. The 2D and 3D
+backbone architectures are not shown, and keypoint voting (which is
+actually the voting feature extraction stage) should be illustrated
+instead of showing a simple vocabulary. Moreover, the back projecting
+stage should be added. 
+(2)In Figure 2&#65292; the testing images for the compared methods are
+not the same. R1.C3 and R1.C6 do not have the same scenes as R1.C1,
+R1.C4, and R1.C5. Similarly, R4C6 does not have the same scenes as the
+others. 
+(3)In Figure 2&#65292; some results are nearly the same, which is
+unreasonable. 
+(4) This paper does not explain the comparison model of interactive
+statements in Table 2. It is not the proposed module; some details
+about this part seem missing, which makes the paper incomplete
+currently.
+Overall, although the idea seems simple and new, the novelty of this
+paper is not clear; the emphasized challenges can't be solved from the
+paper statement, and the experiments cannot verify the statement. So, I
+recommend this paper be rejected. 

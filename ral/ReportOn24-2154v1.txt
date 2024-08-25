@@ -1,0 +1,7 @@
+This paper has received 4 reviews with overall negative comments. The
+AE agrees with most of the reviewers that the details of the proposed
+method and the references for comparisons are both missing. In addition
+to the reviewers' comments, the AE thinks that the paper should conduct
+a more thorough ablation study by replacing the proposed voting-based
+fusion with other fusion alternatives to further validate the
+effectiveness. Overall, the AE regretfully suggests Reject.

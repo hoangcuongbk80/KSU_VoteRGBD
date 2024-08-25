@@ -1,47 +1,47 @@
-This is BibTeX, Version 0.99d (TeX Live 2022)
-Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: main.aux
 The style file: cas-model2-names.bst
 Database file #1: cas-refs.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 31 entries,
+You've used 39 entries,
             2990 wiz_defined-function locations,
-            896 strings with 12739 characters,
-and the built_in function-call counts, 29188 in all, are:
-= -- 2348
-> -- 1342
-< -- 31
-+ -- 512
-- -- 480
-* -- 3137
-:= -- 4004
-add.period$ -- 67
-call.type$ -- 31
-change.case$ -- 313
-chr.to.int$ -- 30
-cite$ -- 31
-duplicate$ -- 2027
-empty$ -- 1952
-format.name$ -- 575
-if$ -- 5753
+            935 strings with 14130 characters,
+and the built_in function-call counts, 35104 in all, are:
+= -- 2830
+> -- 1558
+< -- 36
++ -- 597
+- -- 555
+* -- 3748
+:= -- 4832
+add.period$ -- 88
+call.type$ -- 39
+change.case$ -- 378
+chr.to.int$ -- 38
+cite$ -- 39
+duplicate$ -- 2468
+empty$ -- 2387
+format.name$ -- 674
+if$ -- 6900
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 377
-newline$ -- 144
-num.names$ -- 124
-pop$ -- 707
+missing$ -- 456
+newline$ -- 181
+num.names$ -- 156
+pop$ -- 865
 preamble$ -- 1
-purify$ -- 282
+purify$ -- 339
 quote$ -- 0
-skip$ -- 864
+skip$ -- 1027
 stack$ -- 0
-substring$ -- 1500
-swap$ -- 1640
-text.length$ -- 26
+substring$ -- 1817
+swap$ -- 1956
+text.length$ -- 29
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 279
+type$ -- 351
 warning$ -- 0
-while$ -- 180
+while$ -- 220
 width$ -- 0
-write$ -- 428
+write$ -- 536

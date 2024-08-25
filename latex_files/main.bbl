@@ -1,4 +1,4 @@
-\begin{thebibliography}{31}
+\begin{thebibliography}{39}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\href}[2]{#2}
@@ -79,6 +79,15 @@
 \newblock \bibinfo{title}{Gpv-pose: Category-level object pose estimation via
   geometry-guided point-wise voting}, in: \bibinfo{booktitle}{Proc. IEEE/CVF
   Conf. Comput. Vis. Pattern Recognit.}, pp. \bibinfo{pages}{6781--6791}.
+%Type = Inproceedings
+\bibitem[{Doosti et~al.(2020)Doosti, Naha, Mirbagheri and
+  Crandall}]{doosti2020hope}
+\bibinfo{author}{Doosti, B.}, \bibinfo{author}{Naha, S.},
+  \bibinfo{author}{Mirbagheri, M.}, \bibinfo{author}{Crandall, D.J.},
+  \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{Hope-net: A graph-based model for hand-object pose
+  estimation}, in: \bibinfo{booktitle}{Proc. IEEE/CVF Conf. Comput. Vis.
+  Pattern Recognit.}, pp. \bibinfo{pages}{6608--6617}.
 %Type = Inproceedings
 \bibitem[{Gao et~al.(2020)Gao, Lauri, Wang, Hu, Zhang and Frintrop}]{gao20206d}
 \bibinfo{author}{Gao, G.}, \bibinfo{author}{Lauri, M.}, \bibinfo{author}{Wang,
@@ -192,6 +201,29 @@
   \bibinfo{booktitle}{Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit.}, pp.
   \bibinfo{pages}{10148--10158}.
 %Type = Inproceedings
+\bibitem[{Lin et~al.(2023)Lin, Ding, Yao, Kuang and Huang}]{lin2023harmonious}
+\bibinfo{author}{Lin, Z.}, \bibinfo{author}{Ding, C.}, \bibinfo{author}{Yao,
+  H.}, \bibinfo{author}{Kuang, Z.}, \bibinfo{author}{Huang, S.},
+  \bibinfo{year}{2023}.
+\newblock \bibinfo{title}{Harmonious feature learning for interactive
+  hand-object pose estimation}, in: \bibinfo{booktitle}{Proc. IEEE/CVF Conf.
+  Comput. Vis. Pattern Recognit.}, pp. \bibinfo{pages}{12989--12998}.
+%Type = Article
+\bibitem[{Muhanna(2015)}]{muhanna2015virtual}
+\bibinfo{author}{Muhanna, M.A.}, \bibinfo{year}{2015}.
+\newblock \bibinfo{title}{Virtual reality and the cave: Taxonomy, interaction
+  challenges and research directions}.
+\newblock \bibinfo{journal}{Journal of King Saud University-Computer and
+  Information Sciences} \bibinfo{volume}{27}, \bibinfo{pages}{344--361}.
+%Type = Article
+\bibitem[{Okafor et~al.(2024)Okafor, Oyedeji and Alfarraj}]{okafor2024deep}
+\bibinfo{author}{Okafor, E.}, \bibinfo{author}{Oyedeji, M.},
+  \bibinfo{author}{Alfarraj, M.}, \bibinfo{year}{2024}.
+\newblock \bibinfo{title}{Deep reinforcement learning with light-weight vision
+  model for sequential robotic object sorting}.
+\newblock \bibinfo{journal}{Journal of King Saud University-Computer and
+  Information Sciences} \bibinfo{volume}{36}, \bibinfo{pages}{101896}.
+%Type = Inproceedings
 \bibitem[{Peng et~al.(2019)Peng, Liu, Huang, Zhou and Bao}]{peng2019pvnet}
 \bibinfo{author}{Peng, S.}, \bibinfo{author}{Liu, Y.}, \bibinfo{author}{Huang,
   Q.}, \bibinfo{author}{Zhou, X.}, \bibinfo{author}{Bao, H.},
@@ -223,6 +255,21 @@
 \newblock \bibinfo{title}{Pointnet++: Deep hierarchical feature learning on
   point sets in a metric space}, in: \bibinfo{booktitle}{Advances in neural
   information processing systems}, pp. \bibinfo{pages}{5099--5108}.
+%Type = Article
+\bibitem[{Romero et~al.(2022)Romero, Tzionas and Black}]{romero2022embodied}
+\bibinfo{author}{Romero, J.}, \bibinfo{author}{Tzionas, D.},
+  \bibinfo{author}{Black, M.J.}, \bibinfo{year}{2022}.
+\newblock \bibinfo{title}{Embodied hands: Modeling and capturing hands and
+  bodies together}.
+\newblock \bibinfo{journal}{arXiv preprint arXiv:2201.02610} .
+%Type = Article
+\bibitem[{Sharma and Mir(2022)}]{sharma2022saliency}
+\bibinfo{author}{Sharma, V.K.}, \bibinfo{author}{Mir, R.N.},
+  \bibinfo{year}{2022}.
+\newblock \bibinfo{title}{Saliency guided faster-rcnn (sgfr-rcnn) model for
+  object detection and recognition}.
+\newblock \bibinfo{journal}{Journal of King Saud University-Computer and
+  Information Sciences} \bibinfo{volume}{34}, \bibinfo{pages}{1687--1699}.
 %Type = Inproceedings
 \bibitem[{Wang et~al.(2019)Wang, Xu, Zhu, Mart{\'\i}n-Mart{\'\i}n, Lu, Fei-Fei
   and Savarese}]{wang2019densefusion}
@@ -250,6 +297,21 @@
   point pair features method}, in: \bibinfo{booktitle}{2021 7th International
   Conference on Control, Automation and Robotics (ICCAR)},
   \bibinfo{organization}{IEEE}. pp. \bibinfo{pages}{280--284}.
+%Type = Inproceedings
+\bibitem[{Wang et~al.(2023)Wang, Mao and Li}]{wang2023interacting}
+\bibinfo{author}{Wang, R.}, \bibinfo{author}{Mao, W.}, \bibinfo{author}{Li,
+  H.}, \bibinfo{year}{2023}.
+\newblock \bibinfo{title}{Interacting hand-object pose estimation via dense
+  mutual attention}, in: \bibinfo{booktitle}{Proc. IEEE/CVF Conf. Comput. Vis.
+  Pattern Recognit.}, pp. \bibinfo{pages}{5735--5745}.
+%Type = Article
+\bibitem[{Woo et~al.(2023)Woo, Park, Jeong and Park}]{woo2023survey}
+\bibinfo{author}{Woo, T.}, \bibinfo{author}{Park, W.}, \bibinfo{author}{Jeong,
+  W.}, \bibinfo{author}{Park, J.}, \bibinfo{year}{2023}.
+\newblock \bibinfo{title}{A survey of deep learning methods and datasets for
+  hand pose estimation from hand-object interaction images}.
+\newblock \bibinfo{journal}{Computers \& Graphics} \bibinfo{volume}{116},
+  \bibinfo{pages}{474--490}.
 %Type = Article
 \bibitem[{Wu et~al.(2023)Wu, Chen, Wang, Yang and Jiang}]{wu2023geometric}
 \bibinfo{author}{Wu, C.}, \bibinfo{author}{Chen, L.}, \bibinfo{author}{Wang,

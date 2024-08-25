@@ -1,0 +1,64 @@
+The major contribution of the paper is a vote-based RGBD fusion model
+for hand-held object pose estimation. The key features are hand-object
+keypoint voting from both RGB and depth images, vote-based fusion of
+using channel attention, and hand-aware object pose estimation. The
+authors demonstrate the superior performance of their method compared
+with a set of RGB-only, depth-only, and RGBD pose estimation
+approaches designed for free (not held) objects.
+
+The major strengths of this paper include:
+- The research question of estimating held object poses is topical
+- Estimating object and hand keypoints jointly, and estimating the pose
+of the object relative to the hand, is a good idea
+- The set of ablation studies were informative as to the relative
+benefit of each component of the method
+- The results are well-presented in the tables, as well as Figure 2
+
+The major weaknesses of this paper include: 
+- Incomplete related works section, which does not include reference to
+existing methods for hand-object / held object pose estimation
+- The authors do not compare their method against any existing
+approaches for hand-object / held object pose estimation
+- The extent to which hand pose estimation relies on ground truth
+information is unclear throughout the manuscript, which makes it
+difficult to evaluate how robust this approach is to any error in the
+hand pose estimation, which is not directly addressed by this method.
+
+Additional specific feedback:
+- In the introduction, the problem with "distribution shift" due to
+pretraining is not clear. Consider re-writing this argument.
+- Also in the introduction, the authors reference "non-rigid"
+transformation. What does that mean? In the remainder of the paper, the
+authors frame pose estimation as estimating the 6D transformation of
+the observed object relative to some canonical frame (rigid
+transformation).
+- In the methods section (3D keypoint subsection), the definition of a
+"vote" is unclear. It seems like the features from the PointNet encoder
+are further processed by an MLP, but the loss function does not
+supervise anything about the keypoint features. What is the intuition
+behind what the vote features should contain, and how does that differ
+from the features from the (pretrained?) PointNet encoder?
+- The authors should describe where the ground-truth keypoint locations
+come from, how many there generally are, etc.
+- Why do you predict the cartesian coordinate of the nearest ground
+turth keypoint, if you are just
+- In the methods section (3D keypoint subsection), is the binary
+indicator as to whether the keypoint belongs to the hand / object
+estimated? Or does it rely on ground truth?
+- In the methods section (2D keypoint subsection), is a segmentation
+mask (to remove the background, or to separate the hand and the object)
+required?
+- In the methods section (2D keypoint subsection), it would be nice to
+see a mathematical definition of the smooth L1 loss
+- In the methods section (2D keypoint subsection), the authors state
+that the high-dimensional feature comes from concatenating the features
+of the selected points. In that case, shouldn't the dimension be 2 +
+512*2 instead of 2 + 512? 
+- In the methods section (vote-based feature fusion), what does F_c
+represent? 
+- In general, the channel descriptor section is not that clear / not
+that well motivated. Since it is a key element of the performance, it
+feels important to provide intuition about why this component is
+necessary in the methods section. For example, it feels that the
+channel weights could theoretically be learned implicitly via the first
+MLP that fuses the 3D and 2D features.

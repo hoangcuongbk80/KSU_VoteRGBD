@@ -2,10 +2,13 @@
 \providecommand\hyper@newdestlabel[2]{}
 \providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
 \HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
 \global\let\oldnewlabel\newlabel
 \gdef\newlabel#1#2{\newlabelxx{#1}#2}
 \gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
 \AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
 \let\newlabel\oldnewlabel
 \fi}
 \fi}
@@ -16,36 +19,39 @@
 \orcidauthor{0000-0001-6058-2426}{Dinh-Cuong Hoang}
 \csgdef{mark@corau1}{1}
 \emailauthor{cuonghd12@fe.edu.vn}{Dinh-Cuong Hoang}
-\emailauthor{nhatna3@fe.edu.vn}{Phan Xuan Tan}
+\emailauthor{tanpx@shibaura-it.ac.jp}{Phan Xuan Tan}
 \emailauthor{nhatna3@fe.edu.vn}{Anh-Nhat Nguyen}
 \emailauthor{longpdhe171105@fpt.edu.vn}{Duc-Long Pham}
-\emailauthor{namphgch220279@fpt.edu.vn}{Hai-Nam Pham}
-\emailauthor{anhtvgch220661@fpt.edu.vn}{Viet-Anh Trinh}
 \emailauthor{ducvvhe176438@fpt.edu.vn}{Van-Duc Vu}
 \emailauthor{thiepnvhe173027@fpt.edu.vn}{Van-Thiep Nguyen}
+\emailauthor{uyennthe176614@fpt.edu.vn}{Thu-Uyen Nguyen}
+\emailauthor{thanhtdhe176812@fpt.edu.vn}{Duc-Thanh Tran}
+\emailauthor{toanpkhe170983@fpt.edu.vn}{Khanh-Toan Phan}
+\emailauthor{tungdxhe172611@fpt.edu.vn}{Xuan-Tung Dinh}
 \emailauthor{hiepdvhe181185@fpt.edu.vn}{Van-Hiep Duong}
-\emailauthor{hiepdvhe181185@fpt.edu.vn}{Son-Anh Bui}
-\emailauthor{hiepdvhe181185@fpt.edu.vn}{Khanh-Toan Phan}
-\emailauthor{hiepdvhe181185@fpt.edu.vn}{Van-Hiep Duong}
-\emailauthor{hiepdvhe181185@fpt.edu.vn}{Duc-Thanh Tran}
-\emailauthor{hiepdvhe181185@fpt.edu.vn}{Ngoc-Trung Ho}
-\emailauthor{hiepdvhe181185@fpt.edu.vn}{Van-Hiep Duong}
-\citation{pfanne2018fusing,anzai2020deep}
+\emailauthor{trunghnhe172033@fpt.edu.vn}{Ngoc-Trung Ho}
+\emailauthor{namphgch220279@fpt.edu.vn}{Hai-Nam Pham}
+\emailauthor{anhtvgch220661@fpt.edu.vn}{Viet-Anh Trinh}
+\emailauthor{anhbsgch220491@fpt.edu.vn}{Son-Anh Bui}
+\citation{pfanne2018fusing,anzai2020deep,okafor2024deep}
+\citation{muhanna2015virtual}
 \citation{andrychowicz2020learning,handa2020dexpilot}
 \citation{chao2021dexycb}
-\citation{wang20216d,peng2019pvnet,wang2019densefusion}
+\citation{wang20216d,peng2019pvnet,wang2019densefusion,sharma2022saliency}
 \citation{he2020pvn3d,castro2023crt}
 \citation{wang2019densefusion,he2020pvn3d,he2021ffb6d}
-\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}}
 \newlabel{sec:intro}{{1}{1}{Introduction}{section.1}{}}
 \citation{wang2019densefusion,he2020pvn3d,he2021ffb6d}
 \citation{wang2021gdr,peng2019pvnet}
 \citation{wang20216d,gao20206d,guo2021efficient}
 \citation{billings2019silhonet,peng2019pvnet,wang2021gdr}
 \citation{wang2019densefusion,he2020pvn3d,hong2024rdpn6d}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Related work}{2}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related work}{2}{section.2}}
 \newlabel{sec:relatedwork}{{2}{2}{Related work}{section.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Object Pose Estimation From Visual Inputs}{2}{subsection.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Object Pose Estimation From Visual Inputs}{2}{subsection.2.1}}
+\citation{doosti2020hope,lin2023harmonious,wang2023interacting,woo2023survey}
+\citation{romero2022embodied}
 \citation{hough1959machine}
 \citation{qi2019deep}
 \citation{xie2021venet}
@@ -53,23 +59,22 @@
 \citation{peng2019pvnet}
 \citation{he2020pvn3d}
 \citation{di2022gpv}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Voting Mechanism In Visual Tasks}{3}{subsection.2.2}}
 \citation{qi2019deep}
 \citation{qi2017pointnet++}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Voting Mechanism In Visual Tasks}{3}{subsection.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3}Methodology}{3}{section.3}\protected@file@percent }
-\newlabel{sec:methodology}{{3}{3}{Methodology}{section.3}{}}
-\citation{he2016deep}
-\citation{girshick2015fast}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Overview of our proposed framework for estimating the 6D pose of hand-held objects from RGB-D images. The framework comprises several key components: (1) feature extraction backbones for both 2D images and 3D point clouds, which process the RGB and depth information, respectively; (2) voting modules that generate votes for keypoint locations in both 2D and 3D spaces; (3) a vote-based fusion module $\mathcal  {M}_{fus}$ that effectively combines the multimodal data to address the challenges of occlusions and representation distribution shifts; and (4) a hand-aware object pose estimation module $\mathcal  {M}_{hao}$, which models the interactions between the hand and the object using a self-attention mechanism.\relax }}{4}{figure.caption.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Methodology}{4}{section.3}}
+\newlabel{sec:methodology}{{3}{4}{Methodology}{section.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Overview of our proposed framework for estimating the 6D pose of hand-held objects from RGB-D images. The framework comprises several key components: (1) feature extraction backbones for both 2D images and 3D point clouds, which process the RGB and depth information, respectively; (2) voting modules that generate votes for keypoint locations in both 2D and 3D spaces; (3) a vote-based fusion module $\mathcal  {M}_{fus}$ that effectively combines the multimodal data to address the challenges of occlusions and representation distribution shifts; and (4) a hand-aware object pose estimation module $\mathcal  {M}_{hao}$, which models the interactions between the hand and the object using a self-attention mechanism.\relax }}{4}{figure.caption.1}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:overview}{{1}{4}{Overview of our proposed framework for estimating the 6D pose of hand-held objects from RGB-D images. The framework comprises several key components: (1) feature extraction backbones for both 2D images and 3D point clouds, which process the RGB and depth information, respectively; (2) voting modules that generate votes for keypoint locations in both 2D and 3D spaces; (3) a vote-based fusion module $\mathcal {M}_{fus}$ that effectively combines the multimodal data to address the challenges of occlusions and representation distribution shifts; and (4) a hand-aware object pose estimation module $\mathcal {M}_{hao}$, which models the interactions between the hand and the object using a self-attention mechanism.\relax }{figure.caption.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}3D Point Cloud Branch}{4}{subsection.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}2D Image Branch}{4}{subsection.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Vote-based Feature Fusion}{5}{subsection.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}3D Point Cloud Branch}{4}{subsection.3.1}}
+\citation{he2016deep}
+\citation{girshick2015fast}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}2D Image Branch}{5}{subsection.3.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Vote-based Feature Fusion}{5}{subsection.3.3}}
 \citation{zhang2019self}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Hand-aware Object Pose Estimation}{6}{subsection.3.4}}
 \citation{wang2019densefusion}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Hand-aware Object Pose Estimation}{6}{subsection.3.4}\protected@file@percent }
-\newlabel{eq:loss}{{4}{6}{Hand-aware Object Pose Estimation}{equation.3.4}{}}
 \citation{wang2019densefusion}
 \citation{wang2019densefusion}
 \citation{castro2023crt}
@@ -83,13 +88,14 @@
 \citation{hampali2020honnotate}
 \citation{chao2021dexycb}
 \citation{garcia2018first}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Evaluation}{7}{section.4}\protected@file@percent }
-\newlabel{sec:evaluation}{{4}{7}{Evaluation}{section.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Qualitative results. (a) and (b) are the input RGBD images. (c) shows the rendered images using ground truth hand and object poses. (d), (e), and (f) display the rendered images using ground truth hand poses and object poses predicted by our method, Wang et al. \cite  {wang2019densefusion}, and Castro et al. \cite  {castro2023crt}, respectively.\relax }}{7}{figure.caption.2}\protected@file@percent }
-\newlabel{fig:result}{{2}{7}{Qualitative results. (a) and (b) are the input RGBD images. (c) shows the rendered images using ground truth hand and object poses. (d), (e), and (f) display the rendered images using ground truth hand poses and object poses predicted by our method, Wang et al. \cite {wang2019densefusion}, and Castro et al. \cite {castro2023crt}, respectively.\relax }{figure.caption.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Datasets}{7}{subsection.4.1}\protected@file@percent }
 \citation{hampali2020honnotate}
 \citation{qi2017pointnet++}
+\citation{he2021ffb6d}
+\newlabel{eq:loss}{{4}{7}{Hand-aware Object Pose Estimation}{equation.3.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Evaluation}{7}{section.4}}
+\newlabel{sec:evaluation}{{4}{7}{Evaluation}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Datasets}{7}{subsection.4.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}\textbf  {Implementation Details.}}{7}{subsection.4.2}}
 \citation{hinterstoisser2012model}
 \citation{bregier2017symmetry}
 \citation{bregier2017symmetry}
@@ -113,6 +119,10 @@
 \citation{wu2023geometric}
 \citation{hong2024rdpn6d}
 \citation{lin2024hipose}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Qualitative results. (a) and (b) are the input RGBD images. (c) shows the rendered images using ground truth hand and object poses. (d), (e), and (f) display the rendered images using ground truth hand poses and object poses predicted by our method, \cite  {wang2019densefusion}, and \cite  {castro2023crt}, respectively.\relax }}{8}{figure.caption.2}}
+\newlabel{fig:result}{{2}{8}{Qualitative results. (a) and (b) are the input RGBD images. (c) shows the rendered images using ground truth hand and object poses. (d), (e), and (f) display the rendered images using ground truth hand poses and object poses predicted by our method, \cite {wang2019densefusion}, and \cite {castro2023crt}, respectively.\relax }{figure.caption.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Evaluation metric}{8}{subsection.4.3}}
+\newlabel{sec:metric}{{4.3}{8}{Evaluation metric}{subsection.4.3}{}}
 \citation{chao2021dexycb}
 \citation{garcia2018first}
 \citation{hampali2020honnotate}
@@ -129,9 +139,6 @@
 \citation{wu2023geometric}
 \citation{hong2024rdpn6d}
 \citation{lin2024hipose}
-\citation{chao2021dexycb}
-\citation{garcia2018first}
-\citation{hampali2020honnotate}
 \citation{billings2019silhonet,peng2019pvnet,wang2021gdr,castro2023crt}
 \citation{wang20216d,gao20206d,guo2021efficient}
 \citation{wang2019densefusion,he2020pvn3d,he2021ffb6d,wu2023geometric,hong2024rdpn6d,lin2024hipose}
@@ -139,20 +146,16 @@
 \citation{gao20206d}
 \citation{guo2021efficient}
 \citation{billings2019silhonet,peng2019pvnet,wang2021gdr,castro2023crt}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}\textbf  {Implementation Details.}}{8}{subsection.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Evaluation metric}{8}{subsection.4.3}\protected@file@percent }
-\newlabel{sec:metric}{{4.3}{8}{Evaluation metric}{subsection.4.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Results}{8}{subsection.4.4}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Quantitative results on the DexYCB \cite  {chao2021dexycb}, FPHAB \cite  {garcia2018first}, and HO-3D \cite  {hampali2020honnotate} datasets without Iterative Refinement. Depth-based methods \cite  {wang20216d, gao20206d, guo2021efficient}, RGB methods \cite  {billings2019silhonet, peng2019pvnet, wang2021gdr, castro2023crt}, and RGBD methods \cite  {wang2019densefusion, he2020pvn3d, he2021ffb6d, wu2023geometric, hong2024rdpn6d, lin2024hipose} are compared with our proposed method (Ours).\relax }}{9}{table.caption.3}\protected@file@percent }
-\newlabel{tab:dataset_without_ir}{{1}{9}{Quantitative results on the DexYCB \cite {chao2021dexycb}, FPHAB \cite {garcia2018first}, and HO-3D \cite {hampali2020honnotate} datasets without Iterative Refinement. Depth-based methods \cite {wang20216d, gao20206d, guo2021efficient}, RGB methods \cite {billings2019silhonet, peng2019pvnet, wang2021gdr, castro2023crt}, and RGBD methods \cite {wang2019densefusion, he2020pvn3d, he2021ffb6d, wu2023geometric, hong2024rdpn6d, lin2024hipose} are compared with our proposed method (Ours).\relax }{table.caption.3}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Quantitative results on the DexYCB \cite  {chao2021dexycb}, FPHAB \cite  {garcia2018first}, and HO-3D \cite  {hampali2020honnotate} datasets with Iterative Refinement.\relax }}{9}{table.caption.4}\protected@file@percent }
-\newlabel{tab:dataset_with_ir}{{2}{9}{Quantitative results on the DexYCB \cite {chao2021dexycb}, FPHAB \cite {garcia2018first}, and HO-3D \cite {hampali2020honnotate} datasets with Iterative Refinement.\relax }{table.caption.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Ablation Study}{9}{subsection.4.5}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Ablation study without Iterative Refinement. The table compares our full method with versions that exclude hand keypoint voting (w/o hand keypoints), the vote-based fusion module using channel attention (w/o $\mathcal  {M}_{fus}$), and hand-aware object pose estimation using self-attention (w/o $\mathcal  {M}_{hao}$).\relax }}{10}{table.caption.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Quantitative results on the DexYCB (\cite  {chao2021dexycb}), FPHAB (\cite  {garcia2018first}), and HO-3D (\cite  {hampali2020honnotate}) datasets without Iterative Refinement. Depth-based methods (\cite  {wang20216d, gao20206d, guo2021efficient}), RGB methods (\cite  {billings2019silhonet, peng2019pvnet, wang2021gdr, castro2023crt}), and RGBD methods (\cite  {wang2019densefusion, he2020pvn3d, he2021ffb6d, wu2023geometric, hong2024rdpn6d, lin2024hipose}) are compared with our proposed method (Ours).\relax }}{9}{table.caption.3}}
+\newlabel{tab:dataset_without_ir}{{1}{9}{Quantitative results on the DexYCB (\cite {chao2021dexycb}), FPHAB (\cite {garcia2018first}), and HO-3D (\cite {hampali2020honnotate}) datasets without Iterative Refinement. Depth-based methods (\cite {wang20216d, gao20206d, guo2021efficient}), RGB methods (\cite {billings2019silhonet, peng2019pvnet, wang2021gdr, castro2023crt}), and RGBD methods (\cite {wang2019densefusion, he2020pvn3d, he2021ffb6d, wu2023geometric, hong2024rdpn6d, lin2024hipose}) are compared with our proposed method (Ours).\relax }{table.caption.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Quantitative results on the DexYCB (\cite  {chao2021dexycb}), FPHAB (\cite  {garcia2018first}), and HO-3D (\cite  {hampali2020honnotate}) datasets with Iterative Refinement.\relax }}{9}{table.caption.4}}
+\newlabel{tab:dataset_with_ir}{{2}{9}{Quantitative results on the DexYCB (\cite {chao2021dexycb}), FPHAB (\cite {garcia2018first}), and HO-3D (\cite {hampali2020honnotate}) datasets with Iterative Refinement.\relax }{table.caption.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Results}{9}{subsection.4.4}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Ablation study without Iterative Refinement. The table compares our full method with versions that exclude hand keypoint voting (w/o hand keypoints), the vote-based fusion module using channel attention (w/o $\mathcal  {M}_{fus}$), and hand-aware object pose estimation using self-attention (w/o $\mathcal  {M}_{hao}$).\relax }}{10}{table.caption.5}}
 \newlabel{tab:ablation_without_ir}{{3}{10}{Ablation study without Iterative Refinement. The table compares our full method with versions that exclude hand keypoint voting (w/o hand keypoints), the vote-based fusion module using channel attention (w/o $\mathcal {M}_{fus}$), and hand-aware object pose estimation using self-attention (w/o $\mathcal {M}_{hao}$).\relax }{table.caption.5}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Ablation study with Iterative Refinement.\relax }}{10}{table.caption.6}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Ablation study with Iterative Refinement.\relax }}{10}{table.caption.6}}
 \newlabel{tab:ablation_with_ir}{{4}{10}{Ablation study with Iterative Refinement.\relax }{table.caption.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{10}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Ablation Study}{10}{subsection.4.5}}
 \bibstyle{cas-model2-names}
 \bibdata{cas-refs}
 \bibcite{andrychowicz2020learning}{{1}{2020}{{Andrychowicz et~al.}}{{Andrychowicz, Baker, Chociej, Jozefowicz, McGrew, Pachocki, Petron, Plappert, Powell, Ray et~al.}}}
@@ -162,29 +165,37 @@
 \bibcite{castro2023crt}{{5}{2023}{{Castro and Kim}}{{}}}
 \bibcite{chao2021dexycb}{{6}{2021}{{Chao et~al.}}{{Chao, Yang, Xiang, Molchanov, Handa, Tremblay, Narang, Van~Wyk, Iqbal, Birchfield et~al.}}}
 \bibcite{di2022gpv}{{7}{2022}{{Di et~al.}}{{Di, Zhang, Lou, Manhardt, Ji, Navab and Tombari}}}
-\bibcite{gao20206d}{{8}{2020}{{Gao et~al.}}{{Gao, Lauri, Wang, Hu, Zhang and Frintrop}}}
-\bibcite{garcia2018first}{{9}{2018}{{Garcia-Hernando et~al.}}{{Garcia-Hernando, Yuan, Baek and Kim}}}
-\bibcite{girshick2015fast}{{10}{2015}{{Girshick}}{{}}}
-\bibcite{guo2021efficient}{{11}{2021}{{Guo et~al.}}{{Guo, Xing, Quan, Yan, Gu, Liu and Zhang}}}
-\bibcite{hampali2020honnotate}{{12}{2020}{{Hampali et~al.}}{{Hampali, Rad, Oberweger and Lepetit}}}
-\bibcite{handa2020dexpilot}{{13}{2020}{{Handa et~al.}}{{Handa, Van~Wyk, Yang, Liang, Chao, Wan, Birchfield, Ratliff and Fox}}}
-\bibcite{he2016deep}{{14}{2016}{{He et~al.}}{{He, Zhang, Ren and Sun}}}
-\bibcite{he2021ffb6d}{{15}{2021}{{He et~al.}}{{He, Huang, Fan, Chen and Sun}}}
-\bibcite{he2020pvn3d}{{16}{2020}{{He et~al.}}{{He, Sun, Huang, Liu, Fan and Sun}}}
-\bibcite{hinterstoisser2012model}{{17}{2012}{{Hinterstoisser et~al.}}{{Hinterstoisser, Lepetit, Ilic, Holzer, Bradski, Konolige and Navab}}}
-\bibcite{hong2024rdpn6d}{{18}{2024}{{Hong et~al.}}{{Hong, Hung and Chen}}}
-\bibcite{hough1959machine}{{19}{1959}{{Hough}}{{}}}
-\bibcite{lin2024hipose}{{20}{2024}{{Lin et~al.}}{{Lin, Su, Nathan, Inuganti, Di, Sundermeyer, Manhardt, Stricker, Rambach and Zhang}}}
-\bibcite{peng2019pvnet}{{21}{2019}{{Peng et~al.}}{{Peng, Liu, Huang, Zhou and Bao}}}
-\bibcite{pfanne2018fusing}{{22}{2018}{{Pfanne et~al.}}{{Pfanne, Chalon, Stulp and Albu-Sch{\"a}ffer}}}
-\bibcite{qi2019deep}{{23}{2019}{{Qi et~al.}}{{Qi, Litany, He and Guibas}}}
-\bibcite{qi2017pointnet++}{{24}{2017}{{Qi et~al.}}{{Qi, Yi, Su and Guibas}}}
-\bibcite{wang2019densefusion}{{25}{2019}{{Wang et~al.}}{{Wang, Xu, Zhu, Mart{\'\i }n-Mart{\'\i }n, Lu, Fei-Fei and Savarese}}}
-\bibcite{wang2021gdr}{{26}{2021a}{{Wang et~al.}}{{Wang, Manhardt, Tombari and Ji}}}
-\bibcite{wang20216d}{{27}{2021b}{{Wang et~al.}}{{Wang, Wang and Zhuang}}}
-\bibcite{wu2023geometric}{{28}{2023}{{Wu et~al.}}{{Wu, Chen, Wang, Yang and Jiang}}}
-\bibcite{xie2021venet}{{29}{2021}{{Xie et~al.}}{{Xie, Lai, Wu, Wang, Lu, Wei and Wang}}}
-\bibcite{xie2020mlcvnet}{{30}{2020}{{Xie et~al.}}{{Xie, Lai, Wu, Wang, Zhang, Xu and Wang}}}
-\bibcite{zhang2019self}{{31}{2019}{{Zhang et~al.}}{{Zhang, Goodfellow, Metaxas and Odena}}}
+\bibcite{doosti2020hope}{{8}{2020}{{Doosti et~al.}}{{Doosti, Naha, Mirbagheri and Crandall}}}
+\bibcite{gao20206d}{{9}{2020}{{Gao et~al.}}{{Gao, Lauri, Wang, Hu, Zhang and Frintrop}}}
+\bibcite{garcia2018first}{{10}{2018}{{Garcia-Hernando et~al.}}{{Garcia-Hernando, Yuan, Baek and Kim}}}
+\bibcite{girshick2015fast}{{11}{2015}{{Girshick}}{{}}}
+\bibcite{guo2021efficient}{{12}{2021}{{Guo et~al.}}{{Guo, Xing, Quan, Yan, Gu, Liu and Zhang}}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{11}{section.5}}
+\bibcite{hampali2020honnotate}{{13}{2020}{{Hampali et~al.}}{{Hampali, Rad, Oberweger and Lepetit}}}
+\bibcite{handa2020dexpilot}{{14}{2020}{{Handa et~al.}}{{Handa, Van~Wyk, Yang, Liang, Chao, Wan, Birchfield, Ratliff and Fox}}}
+\bibcite{he2016deep}{{15}{2016}{{He et~al.}}{{He, Zhang, Ren and Sun}}}
+\bibcite{he2021ffb6d}{{16}{2021}{{He et~al.}}{{He, Huang, Fan, Chen and Sun}}}
+\bibcite{he2020pvn3d}{{17}{2020}{{He et~al.}}{{He, Sun, Huang, Liu, Fan and Sun}}}
+\bibcite{hinterstoisser2012model}{{18}{2012}{{Hinterstoisser et~al.}}{{Hinterstoisser, Lepetit, Ilic, Holzer, Bradski, Konolige and Navab}}}
+\bibcite{hong2024rdpn6d}{{19}{2024}{{Hong et~al.}}{{Hong, Hung and Chen}}}
+\bibcite{hough1959machine}{{20}{1959}{{Hough}}{{}}}
+\bibcite{lin2024hipose}{{21}{2024}{{Lin et~al.}}{{Lin, Su, Nathan, Inuganti, Di, Sundermeyer, Manhardt, Stricker, Rambach and Zhang}}}
+\bibcite{lin2023harmonious}{{22}{2023}{{Lin et~al.}}{{Lin, Ding, Yao, Kuang and Huang}}}
+\bibcite{muhanna2015virtual}{{23}{2015}{{Muhanna}}{{}}}
+\bibcite{okafor2024deep}{{24}{2024}{{Okafor et~al.}}{{Okafor, Oyedeji and Alfarraj}}}
+\bibcite{peng2019pvnet}{{25}{2019}{{Peng et~al.}}{{Peng, Liu, Huang, Zhou and Bao}}}
+\bibcite{pfanne2018fusing}{{26}{2018}{{Pfanne et~al.}}{{Pfanne, Chalon, Stulp and Albu-Sch{\"a}ffer}}}
+\bibcite{qi2019deep}{{27}{2019}{{Qi et~al.}}{{Qi, Litany, He and Guibas}}}
+\bibcite{qi2017pointnet++}{{28}{2017}{{Qi et~al.}}{{Qi, Yi, Su and Guibas}}}
+\bibcite{romero2022embodied}{{29}{2022}{{Romero et~al.}}{{Romero, Tzionas and Black}}}
+\bibcite{sharma2022saliency}{{30}{2022}{{Sharma and Mir}}{{}}}
+\bibcite{wang2019densefusion}{{31}{2019}{{Wang et~al.}}{{Wang, Xu, Zhu, Mart{\'\i }n-Mart{\'\i }n, Lu, Fei-Fei and Savarese}}}
+\bibcite{wang2021gdr}{{32}{2021a}{{Wang et~al.}}{{Wang, Manhardt, Tombari and Ji}}}
+\bibcite{wang20216d}{{33}{2021b}{{Wang et~al.}}{{Wang, Wang and Zhuang}}}
+\bibcite{wang2023interacting}{{34}{2023}{{Wang et~al.}}{{Wang, Mao and Li}}}
+\bibcite{woo2023survey}{{35}{2023}{{Woo et~al.}}{{Woo, Park, Jeong and Park}}}
+\bibcite{wu2023geometric}{{36}{2023}{{Wu et~al.}}{{Wu, Chen, Wang, Yang and Jiang}}}
+\bibcite{xie2021venet}{{37}{2021}{{Xie et~al.}}{{Xie, Lai, Wu, Wang, Lu, Wei and Wang}}}
+\bibcite{xie2020mlcvnet}{{38}{2020}{{Xie et~al.}}{{Xie, Lai, Wu, Wang, Zhang, Xu and Wang}}}
+\bibcite{zhang2019self}{{39}{2019}{{Zhang et~al.}}{{Zhang, Goodfellow, Metaxas and Odena}}}
 \csxdef{lastpage}{12}
-\gdef \@abspage@last{12}

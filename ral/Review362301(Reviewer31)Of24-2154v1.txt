@@ -1,0 +1,85 @@
+Paper summary:
+The authors propose a hand-held object pose estimation method based on
+voting keypoint proposals and feature fusion from RGB images and point
+clouds obtained from RGB-D images. Both modalities have a separate
+backbone producing keypoint votes and features for both hands and
+objects. The authors propose a "Vote-based fusion module" to fuse the
+geometric vote features (obtained from the point cloud) with visual
+vote features (obtained from images). Geometric keypoint votes are
+projected onto the image and concatenated with aggregated visual vote
+features within some radius. These fused features are then passed
+through a 3D channel attention module to emphasize informative channels
+and reduce redundancy. Finally, the "Hand-aware Object Pose Estimation
+module" based on a self-attention mechanism is employed to capture
+dependencies between hand and object keypoints resulting in enhanced
+features. Enhanced features are then passed through the MLP regression
+network to predict the final object poses. The model is trained in an
+end-to-end fashion and supervised by a multi-task loss function which
+combines: geometric and visual voting losses, semantic classification
+loss, and object pose loss. Experimental validation is performed on
+benchmark datasets providing comparison with other RGB, depth, and
+RGB-D-based methods along with an ablation study to investigate the
+impact of both proposed modules on model performance.
+
+Review:
+The paper is well-written and structured, contributions are clearly
+stated. The methodology for the proposed approach is described in
+sufficient detail and is technically sound. Results demonstrate
+significant improvements (~ 13%) compared to other methods on benchmark
+datasets. An ablation study is conducted to verify the individual
+influence of the proposed modules listed as main paper contributions.
+The authors provided the code for the implementation which is
+admirable. Figures are of sufficient quality. 
+
+I have noted some minor remarks mostly regarding the variable names and
+notation in the methodology descriptions (listed below) which I believe
+would improve paper readability. Some additional suggestions for
+improving figures were also included. Besides that, I don't have any
+major remarks or concerns and consider this a solid contribution.
+
+Remarks to authors:
+
+1. (Methodology, general) Dimensions of the backbone output should be
+included on the block diagram in Fig 1.
+
+2. (Methodology, B) "We adopt a pixel-wise direction prediction
+strategy, which encourages the network to prioritize local hand and
+object characteristics while minimizing the influence of cluttered
+backgrounds."
+
+It would be useful if authors could provide more intuition as to why it
+"encourages the network to prioritize local hand and object
+characteristics" for the sake of the reader. Perhaps explain the
+benefit of predicting directional vectors to the closest keypoints used
+in "Image-based voting" compared to other approaches taken in
+literature.
+
+3. (Methodology, general) Constant repetition of mathematical notation
+for the set of votes is unnecessary, name it once, assign it to some
+letter, and use it.
+
+4. (Methodology, general) Choices for variable names are too similar,
+for example for voted points and features (v, F) in 2D and 3D branches.
+This makes following the methodology strenuous at times, as you have to
+constantly check which variable belongs to output of which branch.
+Maybe revising the notation by utilizing left-side superscripts could
+be of use to improve readability. I give a latex example: 
+
+For geometric votes and features:
+
+$$({^{G}v},{^{G}F})$$ 
+
+For visual votes and features:
+
+$$({^{V}v},{^{V}F})$$
+
+5. (Methodology, D) Equations for semantic classification loss L_sem
+and pose loss L_pose should be given for equation (4).
+
+6. Normally I would suggest an additional figure or diagram visualizing
+the flow of information for calculations performed in the "Hand-aware
+Object Pose Estimation" module and "Vote-based Feature Fusion" module.
+I believe this would improve the reading experience since it is easier
+to go through the equations when you can see the flow of information on
+the diagram. However, I believe the paper is already at the maximum
+allowed length (8 pages) so it may not be viable.

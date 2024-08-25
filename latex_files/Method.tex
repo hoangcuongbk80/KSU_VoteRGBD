@@ -12,7 +12,7 @@ Our objective is to determine the 6D pose of a hand-held object within an RGB-D 
 
 \subsection{3D Point Cloud Branch}
 
-Given a depth image, the 3D point cloud branch network converts the image to a 3D point cloud and proceeds to cast votes for 3D keypoints of both hand and objects. Inspired by VoteNet \cite{qi2019deep}, wherein 3D points participate in voting for object centers in object detection tasks, we have formulated our network to predict keypoint locations for individual 3D points. Specifically, we utilize the PointNet++ architecture \cite{qi2017pointnet++} with multi-scale grouping as our backbone network to extract geometric features. The backbone network takes $N$ points as input and enriches them with high-dimensional features $\{\mathbf{p}_{i}\}_{i=1}^{N}$ where $\mathbf{p}_{i} = [\mathbf{x}_i; \mathbf{f}_i]$ with $\mathbf{x}_{i}\in\mathbb{R}^{3}$ being the point location in 3D space and $\mathbf{f}_{i} \in \mathbb{R}^{512}$ being a feature vector.
+Given a depth image, the 3D point cloud branch network converts the image to a 3D point cloud and proceeds to cast votes for 3D keypoints of both hand and objects. Inspired by VoteNet (\cite{qi2019deep}), wherein 3D points participate in voting for object centers in object detection tasks, we have formulated our network to predict keypoint locations for individual 3D points. Specifically, we utilize the PointNet++ architecture (\cite{qi2017pointnet++}) with multi-scale grouping as our backbone network to extract geometric features. The backbone network takes $N$ points as input and enriches them with high-dimensional features $\{\mathbf{p}_{i}\}_{i=1}^{N}$ where $\mathbf{p}_{i} = [\mathbf{x}_i; \mathbf{f}_i]$ with $\mathbf{x}_{i}\in\mathbb{R}^{3}$ being the point location in 3D space and $\mathbf{f}_{i} \in \mathbb{R}^{512}$ being a feature vector.
 
 Subsequently, the points $\{\mathbf{p}_{i}\}_{i=1}^{N}$ are fed into a multi-layer perceptron (MLP) to compute votes $\{\mathbf{V}_{i} = [\mathbf{v}_{i}; \mathbf{F}_{i}] \in \mathbb{R}^{3+512} \}_{i=1}^{N}$. The MLP consists of four fully connected layers, ReLU and batch normalization. Each vote $\mathbf{V}_i$ is represented by a point $\mathbf{v}_{i}$ in 3D space with its Euclidean coordinates supervised to be close to a keypoint $\mathbf{s}_i$, and a feature vector $\mathbf{F}_{i}$. To supervise the learning of votes $\{\mathbf{V}_{i} = [\mathbf{v}_{i}; \mathbf{F}_{i}] \in \mathbb{R}^{3+512} \}_{i=1}^{N}$, we apply a regression loss:
 
@@ -24,7 +24,7 @@ L_{\text{3d-vote}} = \dfrac{1}{N_{oh}} \sum_{i}  \| \mathbf{v}_{i} - \hat{\mathb
 
 \subsection{2D Image Branch}
 
-Given an input color image, this network branch predicts hand and object 2D keypoints. We adopt a pixel-wise direction prediction strategy, which encourages the network to prioritize local hand and object characteristics while minimizing the influence of cluttered backgrounds. We employ ResNet-34 (blocks 1, 2, 3, and 4) as the encoder, coupled with four up-sampling layers serving as the decoder \cite{he2016deep}. The upsampling layers consist of transposed convolutional layers with batch normalization and ReLU activation. For a given pixel $p$, the network predicts a scale-invariant vector $\hat{\mathfrak{u}}(p)$, representing the direction from pixel $p$ to the closest keypoint $s$.
+Given an input color image, this network branch predicts hand and object 2D keypoints. We adopt a pixel-wise direction prediction strategy, which encourages the network to prioritize local hand and object characteristics while minimizing the influence of cluttered backgrounds. We employ ResNet-34 (blocks 1, 2, 3, and 4) as the encoder, coupled with four up-sampling layers serving as the decoder (\cite{he2016deep}). The upsampling layers consist of transposed convolutional layers with batch normalization and ReLU activation. For a given pixel $p$, the network predicts a scale-invariant vector $\hat{\mathfrak{u}}(p)$, representing the direction from pixel $p$ to the closest keypoint $s$.
 
 \begin{equation} 
 \hat{\mathbf{u}}(p) = \frac{s - p}{\parallel s - p \parallel_2}
@@ -59,7 +59,7 @@ Given the votes \(\{\mathbf{V}_i = [\mathbf{v}_i; \mathbf{F}_i] \in \mathbb{R}^{
 \noindent To enhance these fused features, we employ a 3D channel attention module. This module uses global average pooling across all votes to generate a channel descriptor for each feature map. Specifically, global average pooling compresses each channel by computing the average of all values in that channel across all votes, resulting in a descriptor vector \(\mathbf{z}_c\):
 
 \[
-\mathbf{z}_c = \frac{1}{N} \sum_{i=1}^{N} \mathbf{F}_c(i)
+\mathbf{z}_c = \frac{1}{N} \sum_{i=1}^{N} \mathbf{F}^{\text{fus}}_i
 \]
 
 \noindent The channel descriptors are then passed through two fully connected layers to learn a weight vector. The first fully connected layer reduces the dimensionality, and the second fully connected layer restores it back to the original number of channels. Both layers use ReLU activations, except the final layer, which uses a sigmoid activation to normalize the weights between 0 and 1:
@@ -84,7 +84,7 @@ Given a set of votes $\{\mathbf{V}_i = [\mathbf{v}_i; \mathbf{F}_i^{\text{att}}]
 \]
 Here, $\mathbf{C}_m$ is the set of votes in the $m$-th cluster. Votes from each cluster are independently processed by $\text{MLP}_1$ before being max-pooled (channel-wise) to a single feature vector and passed to $\text{MLP}_2$ where information from different votes is further combined. Finally, each cluster yields a keypoint with a 3D position $\mathbf{x}_{j}^{\text{kp}} \in \mathbb{R}^{3}$ and an aggregated feature vector $F_{i} \in \mathbb{R}^{512}$. 
 
-To better learn the relationship between the hand and the object, we integrate a self-attention module into the keypoint feature learning process. This module, inspired by the self-attention mechanism \cite{zhang2019self}, encodes meaningful spatial relationships between the keypoints' features. Given the aggregated features $\{F_i \in \mathbb{R}^{512}\}_{i=1}^M$ from the $M$ keypoints, we apply the self-attention mechanism as follows. Firstly, the feature map $F_i$ is fed into two MLPs to generate two new feature maps $X$ and $Y$:
+To better learn the relationship between the hand and the object, we integrate a self-attention module into the keypoint feature learning process. This module, inspired by the self-attention mechanism (\cite{zhang2019self}), encodes meaningful spatial relationships between the keypoints' features. Given the aggregated features $\{F_i \in \mathbb{R}^{512}\}_{i=1}^M$ from the $M$ keypoints, we apply the self-attention mechanism as follows. Firstly, the feature map $F_i$ is fed into two MLPs to generate two new feature maps $X$ and $Y$:
 \[
 X = \text{MLP}_1(F_i)
 \]
