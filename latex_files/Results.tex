@@ -107,7 +107,7 @@ We evaluate our proposed approach on three publicly available datasets: DexYCB (
 
 \subsection{\textbf{Implementation Details.}}
 
-All images from each dataset are cropped and resized to $256 \times 256$ pixels. Our implementation\footnote{Our code and other materials are available at \url{https://github.com/hoangcuongbk80/6d_object_inhand}} uses a pre-trained ResNet34 model, originally trained on ImageNet, as the encoder for RGB images. For point cloud feature extraction, we randomly sample 12,288 points from depth images and use a PointNet++-based feature learning network (\cite{qi2017pointnet++}), which includes 4 set abstraction (SA) layers and 2 feature propagation (FP) layers. Folowing FFB6D (\cite{he2021ffb6d}), we select 256 hand and object keypoints using SIFT-FPS algorithm. The entire system is implemented using PyTorch and Python, running on an NVIDIA RTX-3090 GPU with an Intel Xeon CPU (12 cores, 2.1GHz), utilizing CUDA and the Linux operating system. For all datasets, we use the Adam optimizer with an initial learning rate of 0.01. The learning rate decays by 0.1 at epochs 80, 140, and 200. We train the model with a batch size of 8 and apply standard data augmentation techniques.
+All images from each dataset are cropped and resized to $256 \times 256$ pixels. Our implementation\footnote{Our code and other materials are available at \url{https://github.com/papersubm/6d_object_inhand}} uses a pre-trained ResNet34 model, originally trained on ImageNet, as the encoder for RGB images. For point cloud feature extraction, we randomly sample 12,288 points from depth images and use a PointNet++-based feature learning network (\cite{qi2017pointnet++}), which includes 4 set abstraction (SA) layers and 2 feature propagation (FP) layers. Folowing FFB6D (\cite{he2021ffb6d}), we select 256 hand and object keypoints using SIFT-FPS algorithm. The entire system is implemented using PyTorch and Python, running on an NVIDIA RTX-3090 GPU with an Intel Xeon CPU (12 cores, 2.1GHz), utilizing CUDA and the Linux operating system. For all datasets, we use the Adam optimizer with an initial learning rate of 0.01. The learning rate decays by 0.1 at epochs 80, 140, and 200. We train the model with a batch size of 8 and apply standard data augmentation techniques.
 
 \subsection{Evaluation metric}
 \label{sec:metric}
@@ -126,7 +126,7 @@ To assess the accuracy of the estimated pose $\hat{P}$ relative to the ground-tr
 
 %-------------------------------------------------
 \begin{table}[h]
-\caption{Quantitative results on the DexYCB (\cite{chao2021dexycb}), FPHAB (\cite{garcia2018first}), and HO-3D (\cite{hampali2020honnotate}) datasets without Iterative Refinement. Depth-based methods (\cite{wang20216d, gao20206d, guo2021efficient}), RGB methods (\cite{billings2019silhonet, peng2019pvnet, wang2021gdr, castro2023crt}), and RGBD methods (\cite{wang2019densefusion, he2020pvn3d, he2021ffb6d, wu2023geometric, hong2024rdpn6d, lin2024hipose}) are compared with our proposed method (Ours).}
+\caption{Quantitative results on the DexYCB (\cite{chao2021dexycb}), FPHAB (\cite{garcia2018first}), and HO-3D (\cite{hampali2020honnotate}) datasets without Iterative Refinement. Depth-based methods (\cite{wang20216d, gao20206d, guo2021efficient}), RGB methods (\cite{billings2019silhonet, peng2019pvnet, wang2021gdr, castro2023crt}), and RGBD methods (\cite{wang2019densefusion, he2020pvn3d, he2021ffb6d, wu2023geometric, hong2024rdpn6d, lin2024hipose}) are compared with our proposed method (Ours). The runtime for each method is measured in milliseconds (ms).}
 \label{tab:dataset_without_ir}
 \begin{center}
 \begin{tabular}{|l|c|c|c|c|c|c|c|} 
@@ -158,7 +158,7 @@ Ours & \textbf{80.3} & \textbf{81.2} & \textbf{82.1} & \textbf{83.4} & \textbf{8
 %-------------------------------------------------
 
 \begin{table}[h]
-\caption{Quantitative results on the DexYCB (\cite{chao2021dexycb}), FPHAB (\cite{garcia2018first}), and HO-3D (\cite{hampali2020honnotate}) datasets with Iterative Refinement.}
+\caption{Quantitative results on the DexYCB (\cite{chao2021dexycb}), FPHAB (\cite{garcia2018first}), and HO-3D (\cite{hampali2020honnotate}) datasets with Iterative Refinement. The runtime for each method is measured in milliseconds (ms).}
 \label{tab:dataset_with_ir}
 \begin{center}
 \begin{tabular}{|l|c|c|c|c|c|c|c|} 
@@ -191,6 +191,37 @@ Ours & \textbf{86.7} & \textbf{87.2} & \textbf{88.0} & \textbf{88.5} & \textbf{8
 %-------------------------------------------------
 
 Table \ref{tab:dataset_without_ir} and \ref{tab:dataset_with_ir} present the quantitative results, while Figure \ref{fig:result} illustrates the qualitative results. The proposed method achieves the highest accuracy across all datasets in both AUC and AP metrics. For instance, in the DexYCB dataset, our method achieves an AUC of 80.3 and an AP of 81.2 without iterative refinement, and an AUC of 86.7 and an AP of 87.2 with iterative refinement. The results indicate that RGBD-based methods generally outperform RGB-only (\cite{billings2019silhonet, peng2019pvnet, wang2021gdr, castro2023crt}) and depth-only methods (\cite{wang20216d, gao20206d, guo2021efficient}), leveraging the complementary information from both modalities for superior 3D pose estimation. Among the RGBD methods (\cite{wang2019densefusion, he2020pvn3d, he2021ffb6d, wu2023geometric, hong2024rdpn6d, lin2024hipose}), our approach stands out not only for its accuracy but also for its computational efficiency. Despite not being the fastest overall, our method is the fastest among RGBD methods, with a runtime of 40 ms without iterative refinement and 200 ms with iterative refinement, making it feasible for real-world applications. Depth-based methods, such as those by \cite{wang20216d}, \cite{gao20206d}, and \cite{guo2021efficient}, exhibit reasonable speeds but do not achieve the same level of accuracy as RGBD methods. Conversely, RGB methods (\cite{billings2019silhonet, peng2019pvnet, wang2021gdr, castro2023crt}), while faster, sacrifice some accuracy compared to RGBD methods. This balance of high accuracy and competitive speed highlights the practical applicability of our method in real-world scenarios.
+
+%-------------------------------------------------
+\begin{table}[h]
+\caption{Performance comparison of our method with other state-of-the-art hand-object pose estimation methods. The upper section shows results without iterative refinement, and the lower section includes iterative refinement. The runtime for each method is measured in milliseconds (ms).}
+\label{tab:compare_ho}
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|c|c|} 
+\hline
+& \multicolumn{2}{c|}{DexYCB} & \multicolumn{2}{c|}{FPHAB} & \multicolumn{2}{c|}{HO-3D} & Time \\
+\hline
+Method & $AUC$ & $AP$ & $AUC$ & $AP$ & $AUC$ & $AP$ & $ms$ \\  
+\hline 
+\cite{doosti2020hope} & 56.5 & 57.3 & 58.7 & 59.3 & 57.2 & 58.5 & 131 \\
+\cite{lin2023harmonious} & 58.7 & 59.5 & 61.8 & 62.1 & 60.0 & 61.1 & 143 \\
+\cite{wang2023interacting} & 61.3 & 62.1 & 63.0 & 64.5 & 62.6 & 63.4 & 154 \\
+\cite{qi2024hoisdf} & 63.0 & 64.5 & 65.4 & 66.3 & 64.1 & 65.2 & 120 \\
+Ours & \textbf{80.3} & \textbf{81.2} & \textbf{82.1} & \textbf{83.4} & \textbf{81.5} & \textbf{82.6} & 40 \\
+\hline
+\cite{doosti2020hope} & 65.2 & 67.1 & 66.2 & 67.0 & 64.3 & 67.0 & 461 \\
+\cite{lin2023harmonious} & 69.0 & 71.2 & 69.0 & 70.7 & 68.1 & 69.0 & 496 \\
+\cite{wang2023interacting} & 69.3 & 70.4 & 71.2 & 73.8 & 70.1 & 71.8 & 535 \\
+\cite{qi2024hoisdf} & 70.7 & 72.6 & 73.0 & 75.3 & 72.4 & 74.2 & 422 \\
+Ours & \textbf{86.7} & \textbf{87.2} & \textbf{88.0} & \textbf{88.5} & \textbf{88.3} & \textbf{87.7} & 200 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+%-------------------------------------------------
+
+We further compare the proposed method with joint hand-object pose estimation approaches, as shown in Table~\ref{tab:compare_ho}. It is important to note that we evaluate the performance exclusively on object pose estimation, even though the compared methods estimate both hand and object poses. By focusing solely on object pose estimation, our method avoids the complexities inherent in modeling hand articulations. The model is simpler, with fewer parameters, making it easier to train and less prone to overfitting. This design choice results in a more streamlined and accurate estimation process, leading to significantly higher AUC and AP scores across all datasets. For instance, without iterative refinement, our method achieves an AUC of 80.3 and an AP of 81.2 on the DexYCB dataset, compared to 63.0 and 64.5, respectively, for the method by \cite{qi2024hoisdf}. On the FPHAB dataset, our method obtains an AUC of 82.1 and an AP of 83.4, far outperforming \cite{qi2024hoisdf}, which achieves 65.4 and 66.3. The same trend continues on the HO-3D dataset, where our method achieves an AUC of 81.5 and an AP of 82.6, compared to 64.1 and 65.2 for \cite{qi2024hoisdf}. Moreover, the exclusion of hand pose estimation not only enhances accuracy but also significantly improves runtime efficiency. Our method operates at 40 ms without iterative refinement and 200 ms with iterative refinement, which is considerably faster than joint estimation methods such as \cite{lin2023harmonious}, which requires 143 ms and 496 ms. These results clearly demonstrate the advantages of simplifying the problem to focus exclusively on object pose estimation, particularly in applications where the object's pose is more critical than the hand's, such as inventory scanning and mobile AR. By concentrating on this primary task, we achieve both higher accuracy and faster performance, validating our approach as a practical and effective solution for hand-held object pose estimation in complex, occluded environments.
+
 
 \subsection{Ablation Study}
 
@@ -246,11 +277,3 @@ The ablation study reveals the significance of each component in our method for 
 \section{Conclusion}
 
 In this paper, we have introduced a novel deep neural network designed for the 6D pose estimation of hand-held objects using RGB-D images. Our approach tackles the significant challenges posed by occlusions from the hand and the complexities in effectively fusing RGB and depth data.  Our network leverages a voting scheme where both 2D and 3D keypoints cast votes for the object's pose, significantly enhancing the estimation in scenarios with occluded objects. Additionally, we model the interaction between the hand and the object through a self-attention mechanism, which captures complex spatial relationships and improves the robustness of the pose estimation process. Extensive experiments on three public datasets demonstrate that our method outperforms existing approaches in terms of accuracy and robustness. Our vote-based RGBD fusion framework offers a promising solution for hand-held object pose estimation, particularly in challenging scenarios involving occlusions and complex hand-object interactions. Future work will focus on further improving the efficiency of the model and exploring its application to a broader range of objects and environments. \\
-
-\textbf{CRediT authorship contribution statement} \\
-
-Dinh-Cuong Hoang: Writing - original draft, Methodology, Formal analysis, Conceptualization, Supervision. Phan Xuan Tan: Conceptualization, Supervision. Anh-Nhat Nguyen: Conceptualization, Supervision. Duc-Long Pham: Visualization, Methodology, Validation, Conceptualization. Van-Duc Vu: Visualization, Validation, Conceptualization. Van-Thiep Nguyen:  Investigation, Validation, Conceptualization. Thu-Uyen Nguyen: Investigation, Validation, Conceptualization. Duc-Thanh Tran: Investigation, Validation, Conceptualization.  Khanh-Toan Phan: Investigation, Validation, Conceptualization. Xuan-Tung Dinh: Investigation, Validation, Conceptualization. Van-Hiep Duong: Investigation, Conceptualization. Ngoc-Trung Ho: Investigation, Conceptualization. Hai-Nam Pham: Investigation, Conceptualization. Viet-Anh Trinh: Investigation, Conceptualization. Son-Anh Bui: Investigation, Conceptualization. \\ 
-
-\textbf{Declaration of competing interest} \\
-
-The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
